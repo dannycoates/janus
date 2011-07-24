@@ -33,10 +33,6 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
-
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
@@ -142,6 +138,14 @@ runtime! macros/matchit.vim
 
 " Show (partial) command in the status line
 set showcmd
+
+set listchars=tab:▸\ ,eol:¬
+set history=1024
+set undolevels=1024
+set nobackup
+set laststatus=2
+
+let mapleader=","
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))

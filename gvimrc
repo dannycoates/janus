@@ -69,7 +69,7 @@ set visualbell
 set guioptions-=T
 
 " Default gui color scheme
-color ir_black
+color solarized
 
 " ConqueTerm wrapper
 function StartTerm()
@@ -110,7 +110,6 @@ function s:CdIfDirectory(directory)
   endif
 
   if directory
-    NERDTree
     wincmd p
     bd
   endif
@@ -168,8 +167,6 @@ endfunction
 function ChangeDirectory(dir, ...)
   execute "cd " . fnameescape(a:dir)
   let stay = exists("a:1") ? a:1 : 1
-
-  NERDTree
 
   if !stay
     wincmd p
