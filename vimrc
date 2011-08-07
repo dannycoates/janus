@@ -12,8 +12,8 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
-set list listchars=tab:\ \ ,trail:·
+" set expandtab
+" set list listchars=tab:\ \ ,trail:·
 
 " Searching
 set hlsearch
@@ -121,14 +121,12 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+set background=dark
+colorscheme solarized
 
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
-
-" Turn off jslint errors by default
-let g:JSLintHighlightErrorLine = 0
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
